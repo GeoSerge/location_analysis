@@ -5,17 +5,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
-    start_coords = (-6.1753924, 106.8271528)
-    folium_map = folium.Map(
-        location=start_coords, 
-        zoom_start=17
-    )
+    start_coords = (46.9540700, 142.7360300)
+    folium_map = folium.Map(location=start_coords, zoom_start=14)
     folium_map.save('templates/map.html')
     return render_template('index.html')
-
-@app.route('/map')
-def map():
-    return render_template('7_map.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
