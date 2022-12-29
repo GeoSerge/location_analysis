@@ -10,7 +10,7 @@ def index():
         location=start_coords, 
         zoom_start=17
     )
-    folium_map.save('templates/map.html')
+    folium_map.save('map.html')
     return render_template('index.html')
 
 @app.route('/map')
